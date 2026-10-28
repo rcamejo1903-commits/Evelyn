@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Evelyn, con amor — Ricardo ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    --pink: #ff79a9;
+    --pink-light: #ffdce9;
+    --purple: #b8a1ff;
+    --dark: #24152f;
+    --text: #59384f;
+    --white: #fffafd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    background: #fff4f8;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+    outline: 3px solid #ac69dc;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+h1, h2, h3 {
+    line-height: 1.35;
+}
+
+h2 {
+    color: #d84c87;
+    text-align: center;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================
+   BARRA LATERAL
+========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 245px;
+    z-index: 100;
+    overflow-y: auto;
+    padding: 25px 16px;
+    background: linear-gradient(180deg, #fff0f6, #f5eaff);
+    border-right: 1px solid #f7c9dd;
+    box-shadow: 5px 0 25px #7e437b12;
+}
+
+.sidebar-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #e44f8b;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.sidebar-subtitle {
+    text-align: center;
+    font-size: .85rem;
+    margin-bottom: 25px;
+}
+
+.emotion-button {
+    width: 100%;
+    text-align: left;
+    border: 1px solid transparent;
+    background: #ffffffb8;
+    color: #80536e;
+    border-radius: 15px;
+    padding: 12px 11px;
+    margin: 5px 0;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.emotion-button:hover,
+.emotion-button.active {
+    background: white;
+    border-color: #ffb7d1;
+    transform: translateX(3px);
+    color: #d94782;
+}
+
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid #edc6dc;
+    margin: 20px 0;
+}
+
+.sidebar-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    color: #82526e;
+    padding: 11px 9px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.sidebar-link:hover {
+    background: #ffffffb8;
+}
+
+.sidebar-note {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+main {
+    margin-left: 245px;
+    min-height: 100vh;
+}
+
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 45px 25px;
+    scroll-margin-top: 20px;
+}
+
+.card {
+    background: #ffffffec;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 10px 35px #b95d8a14;
+    margin: 20px 0;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff91b8, #f45b98);
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    padding: 13px 22px;
+    font-weight: 800;
+    box-shadow: 0 6px 18px #f45b9833;
+    transition: transform .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: scale(.97);
+}
+
+.btn-secondary {
+    border: 2px solid #ffc2d9;
+    background: #fff;
+    color: #d84c87;
+    border-radius: 25px;
+    padding: 11px 16px;
+    font-weight: 800;
+}
+
+.center {
+    text-align: center;
+}
+
+.script {
+    font-family: 'Dancing Script', cursive;
+}
+
+.small {
+    font-size: .88rem;
+    opacity: .8;
+}
+
+/* =========================
+   CIELO ESTRELLADO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(ellipse at 50% 100%, #8e548e 0%, transparent 45%),
+        linear-gradient(180deg, #100d2c 0%, #29204f 55%, #57345f 100%);
+    padding: 45px 25px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3.3rem, 8vw, 6.5rem);
+    margin: 15px 0;
+    color: #ffd9e8;
+    text-shadow: 0 0 30px #ff9ec577;
+}
+
+.hero p {
+    max-width: 560px;
+    margin: 15px auto;
+}
+
+.hero-names {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: #ffe5f0;
+    margin: 20px 0;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .25;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+.moon {
+    position: absolute;
+    right: 12%;
+    top: 12%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff1cb;
+    box-shadow: 0 0 55px #ffe4ad55;
+}
+
+.hero-decoration {
+    font-size: 2rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* =========================
+   REPRODUCTOR DE MÚSICA
+========================= */
+
+.music-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #fff1f7;
+    border-radius: 20px;
+    padding: 17px;
+}
+
+.music-icon {
+    font-size: 2.2rem;
+    animation: float 3s infinite;
+}
+
+.music-status {
+    font-size: .9rem;
+    margin: 5px 0;
+}
+
+/* =========================
+   MENSAJES Y BOTONES
+========================= */
+
+.message-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.message-button {
+    min-height: 100px;
+    padding: 15px 10px;
+    background: linear-gradient(145deg, #fff, #fff0f6);
+    border: 2px solid #ffdfeb;
+    color: #d84c87;
+    border-radius: 19px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.message-button:hover {
+    transform: translateY(-4px) rotate(-1deg);
+    border-color: #ffaacb;
+}
+
+.message-output {
+    min-height: 100px;
+    padding: 22px;
+    margin-top: 18px;
+    background: #fff0f6;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #b63f78;
+}
+
+/* =========================
+   CARTA DE AMOR
+========================= */
+
+.envelope-area {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.envelope {
+    font-size: 100px;
+    display: inline-block;
+    cursor: pointer;
+    animation: float 3s infinite;
+    border: 0;
+    background: transparent;
+}
+
+.letter {
+    display: none;
+    background: linear-gradient(145deg, #fffaf1, #fff0f5);
+    border: 1px solid #f7d4b7;
+    border-radius: 8px 25px 8px 25px;
+    padding: 28px;
+    text-align: left;
+    box-shadow: 0 12px 30px #aa71821c;
+    animation: letterOpen .6s ease;
+}
+
+.letter.open {
+    display: block;
+}
+
+.letter p {
+    font-size: 1.03rem;
+}
+
+@keyframes letterOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   JUEGOS
+========================= */
+
+.game-card {
+    background: linear-gradient(145deg, #fff, #fff0f7);
+    border: 1px solid #ffd7e6;
+    border-radius: 24px;
+    padding: 23px;
+    margin: 22px 0;
+}
+
+.game-status {
+    color: #d84c87;
+    font-weight: 800;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.game-area {
+    position: relative;
+    min-height: 250px;
+    border: 2px dashed #ffbad4;
+    background: #fff8fb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.game-heart {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    font-size: 32px;
+    padding: 5px;
+    animation: float 2s infinite;
+}
+
+.quiz-question {
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.15rem;
+    margin: 20px 0;
+}
+
+.answers {
+    display: grid;
+    gap: 10px;
+}
+
+.answer-button {
+    border: 2px solid #ffd2e3;
+    background: white;
+    color: #80506b;
+    padding: 13px;
+    border-radius: 14px;
+    font-weight: 800;
+}
+
+.answer-button:hover {
+    background: #fff0f6;
+}
+
+.answer-button:disabled {
+    opacity: .85;
+}
+
+.progress {
+    height: 10px;
+    background: #ffe1ed;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-inner {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff84b2, #b69bff);
+    transition: width .3s;
+}
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.match-card {
+    min-height: 80px;
+    background: white;
+    border: 2px solid #ffd0e1;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    transition: .2s;
+}
+
+.match-card:hover:not(:disabled) {
+    transform: scale(1.04);
+}
+
+.match-card.matched {
+    background: #e4ffe9;
+    border-color: #94ddb0;
+}
+
+/* =========================
+   BARRA DE EMOCIONES
+========================= */
+
+.emotion-result {
+    display: none;
+    padding: 22px;
+    border-radius: 20px;
+    background: white;
+    border: 2px solid #ffd4e4;
+    margin-top: 18px;
+    animation: letterOpen .4s ease;
+}
+
+.emotion-result.show {
+    display: block;
+}
+
+.emotion-result h3 {
+    color: #df4c89;
+}
+
+/* =========================
+   SORPRESAS
+========================= */
+
+.secret-box {
+    display: none;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #fff1f8, #eee8ff);
+    border: 2px solid #e5b7ed;
+    animation: letterOpen .7s ease;
+}
+
+.secret-box.show {
+    display: block;
+}
+
+.big-heart {
+    font-size: 75px;
+    animation: heartbeat 1.4s infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.final-love {
+    background: linear-gradient(180deg, #fff0f7, #eee8ff);
+    border: 2px solid #f6c3dc;
+    border-radius: 30px;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+/* =========================
+   CORAZONES FLOTANTES
+========================= */
+
+#floatingLayer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 150;
+}
+
+.floating-item {
+    position: absolute;
+    bottom: -45px;
+    animation: rise linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #c26590;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 120;
+    top: 10px;
+    left: 10px;
+    border: 0;
+    background: #fff;
+    color: #d84c87;
+    border-radius: 14px;
+    padding: 11px 15px;
+    box-shadow: 0 4px 18px #0001;
+    font-weight: 800;
+}
+
+@media (max-width: 850px) {
+    .sidebar {
+        transform: translateX(-105%);
+        transition: transform .3s;
+        width: 260px;
+        z-index: 110;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .section {
+        padding: 35px 17px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 520px) {
+    .message-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .match-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card, .game-card {
+        padding: 18px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="floatingLayer" aria-hidden="true"></div>
+
+<button
+    class="mobile-menu"
+    onclick="toggleSidebar()"
+    aria-label="Abrir menú"
+>
+    ☰ Para cuando estés...
+</button>
+
+<!-- =========================
+     BARRA LATERAL EMOCIONAL
+========================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-title">Para cuando estés...</div>
+
+    <p class="sidebar-subtitle">
+        Un mensajito de Ricardo para ti, Evelyn. 💗
+    </p>
+
+    <button class="emotion-button" onclick="showEmotion('triste', this)">
+        🫂 Triste
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('feliz', this)">
+        🌈 Feliz
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('linda', this)">
+        🪞 Te sientas linda
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('molesta', this)">
+        🌧️ Estés molesta
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('bajon', this)">
+        🧸 De bajón
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('extranar', this)">
+        💌 Me extrañes
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('ansiosa', this)">
+        🦋 Tengas un día difícil
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('insegura', this)">
+        🌷 Dudes de ti misma
+    </button>
+
+    <button class="emotion-button" onclick="showEmotion('dormir', this)">
+        🌙 Te vayas a dormir
+    </button>
+
+    <div id="emotionResult" class="emotion-result" aria-live="polite">
+        <h3 id="emotionTitle"></h3>
+        <p id="emotionMessage"></p>
+    </div>
+
+    <hr class="sidebar-divider">
+
+    <p style="font-weight:800; color:#d84c87; padding-left:8px;">
+        Nuestro rinconcito 💕
+    </p>
+
+    <button class="sidebar-link" onclick="goTo('carta')">
+        💌 Nuestra carta
+    </button>
+
+    <button class="sidebar-link" onclick="goTo('mensajes')">
+        💗 Mensajitos
+    </button>
+
+    <button class="sidebar-link" onclick="goTo('juegos')">
+        🎮 Nuestros juegos
+    </button>
+
+    <button class="sidebar-link" onclick="goTo('secreto')">
+        🔐 Sorpresa secreta
+    </button>
+
+    <button class="sidebar-link" onclick="goTo('final')">
+        💝 Mi declaración
+    </button>
+
+    <p class="sidebar-note">
+        Creado con todo el amor del mundo por Ricardo. ❤️
+    </p>
+
+</aside>
+
+<main>
+
+<!-- =========================
+     PORTADA ESTRELLADA
+========================= -->
+
+<header class="hero" id="inicio">
+
+    <div class="moon"></div>
+    <div id="stars"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-decoration">🌸 🧸 🌷</div>
+
+        <p style="letter-spacing:3px;">
+            UN PEQUEÑO UNIVERSO HECHO PARA TI
+        </p>
+
+        <h1>Para mi Evelyn</h1>
+
+        <div class="hero-names">
+            Evelyn ♡ Ricardo
+        </div>
+
+        <p>
+            Entre millones de estrellas, mi corazón encontró
+            una que hace que todo mi universo sea más bonito.
+            Esa estrella eres tú, mi niña. ✨
+        </p>
+
+        <p>
+            Preparé este lugar para que puedas visitarlo
+            cuando quieras recordar cuánto te quiero.
+        </p>
+
+        <button class="btn" onclick="goTo('carta')">
+            Hay algo que quiero decirte... 💌
+        </button>
+
+        <p class="small">
+            Baja despacito, mi amor. Todo esto es para ti. 💗
+        </p>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     MÚSICA
+========================= -->
+
+<section class="section" id="musica">
+
+    <h2>🎵 Una canción para nosotros</h2>
+
+    <div class="card">
+
+        <div class="music-box">
+
+            <div class="music-icon">🎶</div>
+
+            <div>
+                <h3 style="margin:0;">
+                    Perfect — Ed Sheeran
+                </h3>
+
+                <p class="music-status" id="musicStatus" aria-live="polite">
+                    Pulsa reproducir para escuchar nuestra canción.
+                </p>
+            </div>
+
+            <button class="btn" id="musicButton" onclick="toggleMusic()">
+                ▶ Reproducir
+            </button>
+
+        </div>
+
+        <p class="small center">
+            Los navegadores suelen exigir una interacción antes de
+            reproducir música. Por eso, pulsa el botón para empezar.
+        </p>
+
+        <p class="small center">
+            La canción se reproduce mediante el reproductor de YouTube.
+            Si no está disponible en tu región, puedes cambiar el vídeo
+            por una fuente autorizada que tengas.
+        </p>
+
+        <div style="max-width:560px; margin:20px auto;">
+            <iframe
+                id="musicPlayer"
+                width="100%"
+                height="0"
+                src="about:blank"
+                title="Reproductor musical"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="border:0; border-radius:15px;"
+            ></iframe>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CARTA DE AMOR
+========================= -->
+
+<section class="section" id="carta">
+
+    <h2>💌 Una cartita de Ricardo para Evelyn</h2>
+
+    <div class="card">
+
+        <div class="envelope-area">
+
+            <p>
+                Mi niña, hay palabras que quiero que puedas leer
+                cada vez que necesites sentirte querida.
+            </p>
+
+            <button
+                class="envelope"
+                id="envelopeButton"
+                onclick="toggleLetter()"
+                aria-label="Abrir carta de amor"
+            >
+                💌
+            </button>
+
+            <p class="script" style="font-size:1.7rem;">
+                Toca el sobre para abrir tu carta
+            </p>
+
+            <button class="btn" onclick="toggleLetter()">
+                Abrir mi cartita ❤️
+            </button>
+
+        </div>
+
+        <article class="letter" id="loveLetter">
+
+            <h2 class="script" style="text-align:left;">
+                Para Evelyn, mi niña bonita:
+            </h2>
+
+            <p>
+                No sé si algún día encontraré las palabras perfectas
+                para explicarte todo lo que siento por ti, pero quiero
+                seguir intentándolo, porque tú mereces saberlo.
+            </p>
+
+            <p>
+                Desde que formas parte de mi vida, tienes un lugar
+                muy especial en mi corazón. Me encanta tu forma de ser,
+                tu sonrisa, tus detalles y todas esas pequeñas cosas
+                que te convierten en una persona tan bonita.
+            </p>
+
+            <p>
+                Quiero que recuerdes que no tienes que ser perfecta
+                para que te quiera. Puedes tener días buenos y días
+                malos, puedes estar cansada, triste, enfadada o no
+                sentirte tú misma. No tienes que fingir estar bien
+                conmigo.
+            </p>
+
+            <p>
+                Quiero escucharte cuando necesites hablar, celebrar
+                contigo tus alegrías y acompañarte cuando las cosas
+                se pongan difíciles. Quiero que puedas sentirte
+                querida, respetada y valorada.
+            </p>
+
+            <p>
+                Evelyn, me pareces preciosa. Me gustas muchísimo.
+                Me encanta poder llamarte mi niña y me hace feliz
+                pensar en todos los momentos bonitos que todavía
+                podemos compartir.
+            </p>
+
+            <p>
+                No hice esta página porque una página pudiera contener
+                todo mi amor. La hice porque quería regalarte algo
+                que llevara un pedacito de mí y que pudieras abrir
+                siempre que quisieras.
+            </p>
+
+            <p>
+                Si algún día dudas de lo importante que eres para mí,
+                vuelve aquí. Lee estas palabras y recuerda que hay
+                alguien que se siente muy afortunado de tenerte en su vida.
+            </p>
+
+            <p>
+                Gracias por ser tú. Gracias por existir.
+                Y gracias por darme tantas razones para sonreír.
+            </p>
+
+            <p class="script" style="font-size:2rem;">
+                Te quiero muchísimo, mi Evelyn. ❤️
+            </p>
+
+            <p class="script" style="font-size:1.8rem;">
+                Siempre con amor,<br>
+                Tu Ricardo. 💋
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     MENSAJES BONITOS
+========================= -->
+
+<section class="section" id="mensajes">
+
+    <h2>💗 Una colección de mimitos para ti</h2>
+
+    <p class="center">
+        Pulsa todos los botones que quieras.
+        No hay límite de veces para recordarte lo preciosa que eres.
+    </p>
+
+    <div class="message-grid">
+
+        <button class="message-button" onclick="showMessage(0)">
+            🌷 Lo bonita que eres
+        </button>
+
+        <button class="message-button" onclick="showMessage(1)">
+            💋 Un besito mío
+        </button>
+
+        <button class="message-button" onclick="showMessage(2)">
+            🥹 Una confesión
+        </button>
+
+        <button class="message-button" onclick="showMessage(3)">
+            🫂 Un abrazo
+        </button>
+
+        <button class="message-button" onclick="showMessage(4)">
+            💞 Lo que siento
+        </button>
+
+        <button class="message-button" onclick="showMessage(5)">
+            ✨ Una verdad
+        </button>
+
+        <button class="message-button" onclick="showMessage(6)">
+            🧸 Mimitos extra
+        </button>
+
+        <button class="message-button" onclick="showMessage(7)">
+            🌎 Mi persona especial
+        </button>
+
+        <button class="message-button" onclick="showMessage(8)">
+            💝 Un recordatorio
+        </button>
+
+        <button class="message-button" onclick="showMessage(9)">
+            🦋 Lo que me provocas
+        </button>
+
+        <button class="message-button" onclick="showMessage(10)">
+            🌹 Una promesita
+        </button>
+
+        <button class="message-button" onclick="showMessage(11)">
+            ❤️ Tres palabras
+        </button>
+
+    </div>
+
+    <div class="message-output" id="messageOutput" aria-live="polite">
+        Aquí te esperan un montón de palabras bonitas, mi niña. 💗
+    </div>
+
+    <div class="center" style="margin-top:18px;">
+        <button class="btn" onclick="randomMessage()">
+            🎁 Sorpréndeme con un mensajito
+        </button>
+    </div>
+
+</section>
+
+<!-- =========================
+     MINIJUEGOS
+========================= -->
+
+<section class="section" id="juegos">
+
+    <h2>🎮 Nuestros pequeños juegos de amor</h2>
+
+    <p class="center">
+        Cada juego es una pequeña aventura.
+        Complétalos todos para desbloquear algo que he guardado
+        especialmente para ti. 🔐💗
+    </p>
+
+    <!-- JUEGO 1 -->
+
+    <div class="game-card" id="game1">
+
+        <h3>💗 Juego 1: Atrapa los corazones</h3>
+
+        <p>
+            <strong>Instrucciones:</strong><br>
+            Pulsa el botón de comenzar. Aparecerán corazones
+            en la zona de juego. Toca 10 corazones antes de que
+            termine el tiempo. ¡Tú puedes, mi niña!
+        </p>
+
+        <p class="game-status" id="heartStatus">
+            Corazones: 0/10 · Tiempo: 20 segundos
+        </p>
+
+        <div class="progress">
+            <div class="progress-inner" id="heartProgress"></div>
+        </div>
+
+        <div class="center">
+            <button class="btn" id="startHeartGame" onclick="startHeartGame()">
+                ¡Empezar! 💕
+            </button>
+        </div>
+
+        <div class="game-area" id="heartArea">
+            <p class="center" id="heartPlaceholder" style="padding:60px 10px;">
+                Aquí aparecerán tus corazoncitos. 💗
+            </p>
+        </div>
+
+        <div class="message-output" id="heartReward" aria-live="polite">
+            ¡Estoy deseando ver cómo lo haces!
+        </div>
+
+    </div>
+
+    <!-- JUEGO 2 -->
+
+    <div class="game-card" id="game2">
+
+        <h3>🧩 Juego 2: ¿Cuánto conoces mi amor?</h3>
+
+        <p>
+            <strong>Instrucciones:</strong><br>
+            Responde cinco preguntas románticas. Cada respuesta
+            te acercará un poquito más a la siguiente sorpresa.
+        </p>
+
+        <div class="progress">
+            <div class="progress-inner" id="quizProgress"></div>
+        </div>
+
+        <p class="game-status" id="quizStatus">
+            Aún no has empezado este jueguito. 🥰
+        </p>
+
+        <div class="quiz-question" id="quizQuestion">
+            ¿Preparada para responder, Evelyn?
+        </div>
+
+        <div class="answers" id="quizAnswers">
+            <button class="btn" onclick="startQuiz()">
+                ¡Sí, mi Ricardo! 💗
+            </button>
+        </div>
+
+        <div class="message-output" id="quizReward" aria-live="polite">
+            No hay respuestas malas cuando se juega con amor.
+        </div>
+
+    </div>
+
+    <!-- JUEGO 3 -->
+
+    <div class="game-card" id="game3">
+
+        <h3>🌸 Juego 3: Encuentra nuestras parejitas</h3>
+
+        <p>
+            <strong>Instrucciones:</strong><br>
+            Pulsa dos cartas para descubrir sus símbolos.
+            Si son iguales, se quedarán descubiertas.
+            Encuentra las seis parejas para ganar.
+        </p>
+
+        <p class="game-status" id="matchStatus">
+            Parejas encontradas: 0/6
+        </p>
+
+        <div class="match-grid" id="matchGrid"></div>
+
+        <div class="center" style="margin-top:15px;">
+            <button class="btn" onclick="startMatchGame()">
+                Mezclar y volver a jugar 🔄
+            </button>
+        </div>
+
+        <div class="message-output" id="matchReward" aria-live="polite">
+            Cada parejita encontrada es otro besito para ti. 💋
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SORPRESA SECRETA
+========================= -->
+
+<section class="section" id="secreto">
+
+    <h2>🔐 Un secreto que he guardado para ti</h2>
+
+    <div class="card center">
+
+        <div class="big-heart">💝</div>
+
+        <p>
+            He escondido una sorpresita al final de nuestros juegos.
+            Cada aventura completada te acercará más a ella.
+        </p>
+
+        <div class="progress">
+            <div class="progress-inner" id="secretProgress"></div>
+        </div>
+
+        <p class="game-status" id="secretStatus" aria-live="polite">
+            Juegos completados: 0/3
+        </p>
+
+        <button class="btn" id="secretButton" onclick="unlockSecret()">
+            Comprobar mi sorpresa ✨
+        </button>
+
+        <div class="secret-box" id="secretBox">
+
+            <div class="big-heart">💖</div>
+
+            <h2 class="script" style="font-size:2.5rem;">
+                ¡Lo has conseguido, Evelyn!
+            </h2>
+
+            <p>
+                Has encontrado la sorpresa que Ricardo guardó
+                especialmente para ti.
+            </p>
+
+            <p>
+                Pero hay algo que quiero que sepas:
+                tú no tienes que ganar ningún juego, conseguir puntos
+                ni demostrar nada para merecer amor.
+            </p>
+
+            <p>
+                Esta pequeña aventura solo era mi manera de regalarte
+                un momento bonito y recordarte cuánto me importas.
+            </p>
+
+            <p>
+                Y como has llegado hasta aquí...
+                ¡te has ganado una lluvia de besitos virtuales!
+            </p>
+
+            <button class="btn" onclick="kissRain()">
+                ¡Quiero mis besitos! 💋
+            </button>
+
+            <p id="kissMessage"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     DECLARACIÓN FINAL
+========================= -->
+
+<section class="section" id="final">
+
+    <div class="final-love">
+
+        <div class="hero-decoration">🌷 🧸 🌷</div>
+
+        <h2 class="script" style="font-size:clamp(2.5rem, 6vw, 4rem);">
+            Mi declaración para ti
+        </h2>
+
+        <p>
+            Evelyn, si has llegado hasta aquí, quiero darte las gracias
+            por dedicar un ratito de tu tiempo a este pequeño regalo.
+        </p>
+
+        <p>
+            Cada palabra, cada botón, cada corazón y cada sorpresa
+            están aquí para recordarte algo muy sencillo:
+            eres una persona preciosa y me hace muy feliz poder quererte.
+        </p>
+
+        <p>
+            No puedo prometerte que todos los días serán perfectos,
+            pero sí quiero esforzarme por tratarte con cariño,
+            escucharte, respetarte y construir contigo recuerdos
+            que nos hagan sonreír.
+        </p>
+
+        <p>
+            Quiero que tengas días llenos de alegría, que te sientas
+            orgullosa de ti misma y que nunca olvides lo mucho
+            que vales, incluso cuando tú misma no puedas verlo.
+        </p>
+
+        <p class="script" style="font-size:2.5rem; color:#dc4b88;">
+            Te amo, Evelyn. ❤️
+        </p>
+
+        <p>
+            De tu Ricardo, que ha preparado este pequeño universo
+            pensando en ti. 🌌
+        </p>
+
+        <button class="btn" onclick="finalSurprise()">
+            Mi última sorpresita... 💌
+        </button>
+
+        <div class="secret-box" id="finalSurpriseBox">
+
+            <div class="big-heart">❤️</div>
+
+            <h2 class="script" style="font-size:2.5rem;">
+                Tú eres mi estrella favorita
+            </h2>
+
+            <p>
+                Si el cielo tuviera que elegir una sola estrella
+                para iluminar mis noches, yo elegiría la que me
+                recuerda a ti.
+            </p>
+
+            <p>
+                Y si pudiera volver al principio de nuestra historia,
+                me encantaría volver a descubrirte, volver a conocerte
+                y volver a encontrar todas esas cosas que me hacen
+                enamorarme de ti.
+            </p>
+
+            <p>
+                Gracias por ser Evelyn.
+                Gracias por dejarme ser Ricardo a tu lado.
+            </p>
+
+            <p class="script" style="font-size:2rem;">
+                Tú, yo y todos los recuerdos bonitos que nos esperan. 💗
+            </p>
+
+            <div class="big-heart">💋</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p class="script" style="font-size:2rem;">
+        Hecho con amor por Ricardo, para Evelyn. 💗
+    </p>
+
+    <p>
+        En algún lugar de este universo, siempre tendrás
+        un rinconcito hecho especialmente para ti. 🌌
+    </p>
+</footer>
+
+</main>
+
+<script>
+/* =====================================
+   CONFIGURACIÓN Y ESTADO DE LA PÁGINA
+===================================== */
+
+const completedGames = new Set();
+
+function completeGame(number) {
+    completedGames.add(number);
+    updateSecretProgress();
+}
+
+function updateSecretProgress() {
+    const total = completedGames.size;
+
+    document.getElementById("secretProgress").style.width =
+        (total / 3 * 100) + "%";
+
+    document.getElementById("secretStatus").textContent =
+        "Juegos completados: " + total + "/3";
+
+    if (total === 3) {
+        document.getElementById("secretStatus").textContent =
+            "¡Has completado los tres juegos, Evelyn! Tu sorpresa está lista. 💗";
+
+        document.getElementById("secretButton").textContent =
+            "¡Abrir mi sorpresa secreta! 🔓";
+    }
+}
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+function goTo(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    if (window.innerWidth <= 850) {
+        document.getElementById("sidebar").classList.remove("open");
+    }
+}
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+}
+
+/* =====================================
+   CIELO ESTRELLADO
+===================================== */
+
+function createStars() {
+    const container = document.getElementById("stars");
+
+    for (let i = 0; i < 130; i++) {
+        const star = document.createElement("span");
+
+        star.className = "star";
+
+        const size = Math.random() * 3 + 1;
+
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+
+        star.style.animationDelay = Math.random() * 3 + "s";
+        star.style.animationDuration =
+            (1.2 + Math.random() * 3) + "s";
+
+        container.appendChild(star);
+    }
+}
+
+createStars();
+
+/* =====================================
+   MÚSICA
+===================================== */
+
+/*
+   El navegador puede impedir que el sonido se reproduzca
+   sin una interacción del usuario.
+
+   Este botón inicia el reproductor de YouTube.
+   Si el vídeo cambia de disponibilidad, reemplaza el ID
+   por el de un vídeo oficial autorizado.
+*/
+
+let musicPlaying = false;
+
+function toggleMusic() {
+    const player = document.getElementById("musicPlayer");
+    const button = document.getElementById("musicButton");
+    const status = document.getElementById("musicStatus");
+
+    if (!musicPlaying) {
+        player.style.height = "160px";
+
+        player.src =
+            "https://www.youtube-nocookie.com/embed/2Vv-BfVoq4g?autoplay=1&playsinline=1";
+
+        musicPlaying = true;
+
+        button.textContent = "⏸ Detener música";
+
+        status.textContent =
+            "Reproductor de Perfect activado. 🎵";
+
+    } else {
+        player.src = "about:blank";
+        player.style.height = "0";
+
+        musicPlaying = false;
+
+        button.textContent = "▶ Reproducir";
+
+        status.textContent =
+            "La música está pausada. Puedes volver a reproducirla cuando quieras.";
+    }
+}
+
+/* =====================================
+   CARTA
+===================================== */
+
+function toggleLetter() {
+    const letter = document.getElementById("loveLetter");
+
+    letter.classList.toggle("open");
+
+    const isOpen = letter.classList.contains("open");
+
+    document.getElementById("envelopeButton").textContent =
+        isOpen ? "💖" : "💌";
+
+    if (isOpen) {
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+
+        floatingHearts(8);
+    }
+}
+
+/* =====================================
+   MENSAJES BONITOS
+===================================== */
+
+const messages = [
+    "Evelyn, eres preciosa. Pero lo que más me gusta es esa forma tan tuya de ser que te hace completamente especial. 🌷",
+
+    "Muaaaaaak. 💋 Ese besito es tuyo. Y si necesitas otro, vuelve a pulsar el botón.",
+
+    "Confesión: todavía hay momentos en los que pienso en ti y sonrío sin darme cuenta. 🥹",
+
+    "Imagina que te abrazo fuerte, te acaricio el pelo y te digo: aquí estoy, mi niña. 🫂",
+
+    "Me gustas muchísimo, Evelyn. No solo por lo bonita que eres, sino por todo lo que eres como persona. ❤️",
+
+    "No necesitas ser perfecta para ser maravillosa. Puedes ser tú misma y seguir siendo increíble. ✨",
+
+    "Te mando un abrazo de osito, un montón de besitos y una mantita de cariño. 🧸",
+
+    "De todas las personas que podría haber conocido, me hace muy feliz que nuestros caminos se hayan cruzado. 🌎",
+
+    "Recordatorio importante: eres valiosa, mereces amor bonito y tienes derecho a cuidarte y a descansar. 💗",
+
+    "Me encanta que seas tú quien aparece en mis pensamientos cuando quiero sonreír. 🦋",
+
+    "Quiero intentar demostrarte con mis acciones que puedes contar conmigo y que me importa cómo te sientes. 🌹",
+
+    "Te amo, mi niña. Tres palabras pequeñitas para un sentimiento que significa muchísimo para mí. ❤️"
+];
+
+function showMessage(index) {
+    const output = document.getElementById("messageOutput");
+
+    output.textContent = messages[index];
+
+    floatingHearts(5);
+}
+
+function randomMessage() {
+    const index = Math.floor(Math.random() * messages.length);
+
+    showMessage(index);
+}
+
+/* =====================================
+   MENSAJES SEGÚN SUS EMOCIONES
+===================================== */
+
+const emotionMessages = {
+    triste: {
+        title: "🫂 Para cuando estés triste",
+        message:
+            "Mi Evelyn, ojalá pudiera abrazarte ahora mismo. No tienes que fingir que estás bien ni encontrar las palabras perfectas para explicar lo que sientes. Puedes tomarte tu tiempo. Estoy aquí para escucharte si quieres hablar, y también para acompañarte en silencio si eso es lo que necesitas. Tu tristeza no te hace menos maravillosa. Te quiero en los días bonitos y también en los difíciles. ❤️"
+    },
+
+    feliz: {
+        title: "🌈 Para cuando estés feliz",
+        message:
+            "¡Mi niña está feliz! 🥹💗 Ojalá pudiera ver esa sonrisa ahora mismo. Disfruta muchísimo este momento, celébralo y recuerda que mereces todas esas cosas bonitas que te hacen brillar. Me encanta imaginarte sonriendo y me hace feliz que te pasen cosas buenas. ¡Guarda un poquito de esa felicidad para contarme luego! 💋"
+    },
+
+    linda: {
+        title: "🪞 Para cuando no te sientas bonita",
+        message:
+            "Evelyn, mi amor, quiero que te mires con un poquito de la ternura con la que yo te miro. Eres preciosa, sí, pero tu valor no depende de cómo te veas hoy ni de lo que diga un espejo. Me gustan tus detalles, tu personalidad y todo eso que te hace ser tú. No necesitas compararte con nadie. No hay otra persona que sea exactamente como tú, y eso es algo precioso. 🌷❤️"
+    },
+
+    molesta: {
+        title: "🌧️ Para cuando estés molesta",
+        message:
+            "Mi niña, si estás enfadada, tienes derecho a sentirlo. No tienes que esconder tus emociones para que yo esté contento. Si algo te ha dolido, quiero escucharte y tratar de comprenderlo, sin quitarle importancia a lo que sientes. Podemos hablar cuando estés preparada. Mereces que te escuchen, te respeten y te traten con cariño, incluso en los momentos difíciles. Te mando un abrazo cuando lo quieras. 🫂"
+    },
+
+    bajon: {
+        title: "🧸 Para cuando estés de bajón",
+        message:
+            "Hola, mi pequeña. 💗 Si hoy todo te pesa un poquito más, respira despacio. No tienes que resolverlo todo en este momento. Puedes descansar, beber un poquito de agua, ponerte cómoda y darte permiso para ir poco a poco. Un día difícil no define quién eres ni borra todas las cosas bonitas que hay en ti. Ojalá pudiera llevarte una mantita, darte un abrazo y recordarte lo mucho que te quiero. 🧸"
+    },
+
+    extranar: {
+        title: "💌 Para cuando me extrañes",
+        message:
+            "Mi Evelyn bonita, si me estás echando de menos, imagina que me acerco a ti, te doy un besito en la frente y te abrazo muy fuerte. Aunque ahora no estemos juntos físicamente, puedes escribirme cuando quieras y buscaremos un ratito para hablar. Ojalá pudiera aparecer a tu lado por arte de magia. Mientras tanto, te mando un millón de besitos desde aquí. 💋❤️"
+    },
+
+    ansiosa: {
+        title: "🦋 Para cuando tengas un día difícil",
+        message:
+            "Mi amor, no tienes que poder con todo al mismo tiempo. Intenta respirar despacio y centrarte en una cosa pequeñita que puedas hacer ahora. No hace falta solucionar el día entero de golpe. Estoy orgulloso de ti por seguir adelante incluso cuando las cosas cuestan. Si necesitas hablar, te escucharé con cariño. Y si necesitas descansar, también está bien. Un pasito cada vez, preciosa. 🦋"
+    },
+
+    insegura: {
+        title: "🌷 Para cuando dudes de ti misma",
+        message:
+            "Evelyn, por favor, no olvides que eres mucho más que tus dudas o tus errores. No tienes que demostrar constantemente que eres suficiente. Tienes cualidades preciosas, mereces respeto y puedes aprender y crecer a tu ritmo. Yo no quiero que dejes de ser tú para gustarle a nadie. Quiero verte crecer, perseguir tus sueños y descubrir cada día todo lo que eres capaz de hacer. Creo en ti, mi niña. 💗"
+    },
+
+    dormir: {
+        title: "🌙 Para cuando te vayas a dormir",
+        message:
+            "Buenas noches, mi Evelyn preciosa. 🌙 Ojalá pudiera darte un besito de buenas noches, arroparte y decirte cuánto te quiero antes de que cerraras los ojitos. Deja las preocupaciones descansar por hoy. Mañana será otra oportunidad para vivir cosas bonitas, aprender y sonreír. Espero que tengas sueños dulces y descanses muchísimo. Te mando un beso enorme. Buenas noches, mi niña. 💋❤️"
+    }
+};
+
+function showEmotion(key, button) {
+    const data = emotionMessages[key];
+
+    document.querySelectorAll(".emotion-button").forEach(item => {
+        item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    document.getElementById("emotionTitle").textContent =
+        data.title;
+
+    document.getElementById("emotionMessage").textContent =
+        data.message;
+
+    const box = document.getElementById("emotionResult");
+
+    box.classList.add("show");
+
+    if (window.innerWidth <= 850) {
+        box.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+    floatingHearts(4);
+}
+
+/* =====================================
+   ANIMACIONES FLOTANTES
+===================================== */
+
+function floatingHearts(amount = 5) {
+    const layer = document.getElementById("floatingLayer");
+
+    const symbols = [
+        "💗", "💕", "💖", "💘", "🌸", "🌷", "✨", "🦋"
+    ];
+
+    for (let i = 0; i < amount; i++) {
+        const item = document.createElement("span");
+
+        item.className = "floating-item";
+
+        item.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+
+        item.style.fontSize =
+            (17 + Math.random() * 22) + "px";
+
+        const duration = 3 + Math.random() * 3;
+
+        item.style.animationDuration = duration + "s";
+
+        layer.appendChild(item);
+
+        setTimeout(() => item.remove(), duration * 1000);
+    }
+}
+
+setInterval(() => {
+    if (!document.hidden) {
+        floatingHearts(1);
+    }
+}, 2400);
+
+/* =====================================
+   JUEGO 1: ATRAPA CORAZONES
+===================================== */
+
+let heartsCaught = 0;
+let heartTime = 20;
+let heartTimer = null;
+let heartGameActive = false;
+
+function startHeartGame() {
+    if (heartGameActive) return;
+
+    heartsCaught = 0;
+    heartTime = 20;
+    heartGameActive = true;
+
+    document.getElementById("heartReward").textContent =
+        "¡Vamos, Evelyn! ¡A por esos corazoncitos! 💗";
+
+    document.getElementById("heartPlaceholder").style.display =
+        "none";
+
+    document.getElementById("startHeartGame").textContent =
+        "¡Atrapa los corazones!";
+
+    updateHeartStatus();
+    spawnGameHeart();
+
+    heartTimer = setInterval(() => {
+        heartTime--;
+
+        updateHeartStatus();
+
+        if (heartTime <= 0) {
+            endHeartGame(false);
+        }
+    }, 1000);
+}
+
+function updateHeartStatus() {
+    document.getElementById("heartStatus").textContent =
+        "Corazones: " + heartsCaught + "/10 · Tiempo: " +
+        heartTime + " segundos";
+
+    document.getElementById("heartProgress").style.width =
+        (heartsCaught / 10 * 100) + "%";
+}
+
+function spawnGameHeart() {
+    if (!heartGameActive) return;
+
+    const area = document.getElementById("heartArea");
+
+    area.querySelectorAll(".game-heart").forEach(item => {
+        item.remove();
+    });
+
+    const heart = document.createElement("button");
+
+    heart.className = "game-heart";
+    heart.textContent = ["💗", "💖", "💕", "💘"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.setAttribute("aria-label", "Atrapar corazón");
+
+    const maxX = Math.max(0, area.clientWidth - 55);
+    const maxY = Math.max(0, area.clientHeight - 60);
+
+    heart.style.left = Math.random() * maxX + "px";
+    heart.style.top = Math.random() * maxY + "px";
+
+    heart.addEventListener("click", () => {
+        if (!heartGameActive) return;
+
+        heartsCaught++;
+
+        floatingHearts(2);
+
+        updateHeartStatus();
+
+        if (heartsCaught >= 10) {
+            endHeartGame(true);
+        } else {
+            spawnGameHeart();
+        }
+    });
+
+    area.appendChild(heart);
+}
+
+function endHeartGame(won) {
+    heartGameActive = false;
+
+    clearInterval(heartTimer);
+
+    document.getElementById("heartArea")
+        .querySelectorAll(".game-heart")
+        .forEach(item => item.remove());
+
+    document.getElementById("heartPlaceholder").style.display =
+        "block";
+
+    document.getElementById("startHeartGame").textContent =
+        "Volver a jugar 💗";
+
+    if (won) {
+        document.getElementById("heartReward").textContent =
+            "¡¡¡LO CONSEGUISTE, EVELYN!!! 💖 Has atrapado los 10 corazones. " +
+            "Premio: un millón de besitos y un abrazo enorme de Ricardo. 💋";
+
+        completeGame(1);
+
+        floatingHearts(25);
+
+    } else {
+        document.getElementById("heartReward").textContent =
+            "¡Se acabó el tiempo, mi niña! 🥹 Has atrapado " +
+            heartsCaught + " corazones. ¡Puedes intentarlo otra vez!";
+
+        document.getElementById("heartStatus").textContent =
+            "¡Inténtalo de nuevo para conseguir tu sorpresa!";
+    }
+}
+
+/* =====================================
+   JUEGO 2: CUESTIONARIO ROMÁNTICO
+===================================== */
+
+const quizQuestions = [
+    {
+        question: "¿Qué es lo que más me gusta de ti?",
+        answers: [
+            "Tu sonrisa y tu forma de ser 🌷",
+            "Que eres un unicornio 🦄",
+            "Que te comes todas las galletas 🍪"
+        ],
+        correct: 0,
+        message:
+            "Tu sonrisa es preciosa, pero también me encanta tu personalidad, tu forma de expresarte y todo lo que te hace única. 💗"
+    },
+    {
+        question: "¿Qué quiero que recuerdes siempre?",
+        answers: [
+            "Que eres valiosa y mereces amor bonito ❤️",
+            "Que tienes que volar hasta la luna 🌙",
+            "Que debes comer pizza todos los días 🍕"
+        ],
+        correct: 0,
+        message:
+            "Quiero que sepas que mereces cariño, respeto y personas que valoren todo lo que eres. 🥹"
+    },
+    {
+        question: "Si pudiera aparecer ahora a tu lado, ¿qué querría hacer?",
+        answers: [
+            "Darte muchos abrazos y besitos 🫂",
+            "Esconder tus zapatos 👟",
+            "Convertirme en una patata 🥔"
+        ],
+        correct: 0,
+        message:
+            "Te abrazaría muy fuerte, te daría muchos besitos y disfrutaría de estar contigo. 💋"
+    },
+    {
+        question: "¿Cuánto me gustas?",
+        answers: [
+            "Un poquito 🤏",
+            "Más que una pizza con extra de queso 🧀",
+            "Muchísimo más de lo que cabría en esta página ❤️"
+        ],
+        correct: 2,
+        message:
+            "¡Exacto! Ni todas las páginas de internet serían suficientes para explicar lo mucho que me gustas. 💖"
+    },
+    {
+        question: "¿Qué deseo para ti?",
+        answers: [
+            "Que nunca tengas emociones 😶",
+            "Que seas feliz y te sientas querida 🌈",
+            "Que te conviertas en un gato 🐱"
+        ],
+        correct: 1,
+        message:
+            "Quiero verte feliz, apoyarte en tus sueños y que nunca olvides lo importante que eres. ❤️"
+    }
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let quizActive = false;
+
+function startQuiz() {
+    quizIndex = 0;
+    quizScore = 0;
+    quizActive = true;
+
+    document.getElementById("quizReward").textContent =
+        "¡Primera pregunta! Confío en ti, mi niña. 💗";
+
+    renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+    const question = quizQuestions[quizIndex];
+
+    document.getElementById("quizStatus").textContent =
+        "Pregunta " + (quizIndex + 1) + " de " +
+        quizQuestions.length;
+
+    document.getElementById("quizProgress").style.width =
+        (quizIndex / quizQuestions.length * 100) + "%";
+
+    document.getElementById("quizQuestion").textContent =
+        question.question;
+
+    const answers = document.getElementById("quizAnswers");
+
+    answers.innerHTML = "";
+
+    question.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+
+        button.className = "answer-button";
+        button.textContent = answer;
+
+        button.addEventListener("click", () => {
+            answerQuiz(index);
+        });
+
+        answers.appendChild(button);
+    });
+}
+
+function answerQuiz(selected) {
+    if (!quizActive) return;
+
+    quizActive = false;
+
+    const question = quizQuestions[quizIndex];
+
+    if (selected === question.correct) {
+        quizScore++;
+    }
+
+    document.getElementById("quizQuestion").textContent =
+        question.message;
+
+    document.getElementById("quizProgress").style.width =
+        ((quizIndex + 1) / quizQuestions.length * 100) + "%";
+
+    const answers = document.getElementById("quizAnswers");
+
+    answers.innerHTML = "";
+
+    const next = document.createElement("button");
+
+    next.className = "btn";
+
+    next.textContent =
+        quizIndex === quizQuestions.length - 1
+        ? "Descubrir mi resultado 💝"
+        : "Siguiente preguntita 💗";
+
+    next.addEventListener("click", () => {
+        quizIndex++;
+
+        if (quizIndex < quizQuestions.length) {
+            quizActive = true;
+            renderQuizQuestion();
+        } else {
+            finishQuiz();
+        }
+    });
+
+    answers.appendChild(next);
+
+    floatingHearts(3);
+}
+
+function finishQuiz() {
+    document.getElementById("quizStatus").textContent =
+        "¡Has terminado el cuestionario, Evelyn! 💗";
+
+    document.getElementById("quizQuestion").textContent =
+        "¡Este es tu resultado!";
+
+    document.getElementById("quizProgress").style.width = "100%";
+
+    document.getElementById("quizReward").textContent =
+        "Has conseguido " + quizScore + " de " +
+        quizQuestions.length + " respuestas correctas. " +
+        "Pero hay algo que ninguna puntuación puede medir: " +
+        "lo especial que eres para mí. ¡Lo has hecho genial, mi niña! 💖";
+
+    document.getElementById("quizAnswers").innerHTML = "";
+
+    const again = document.createElement("button");
+
+    again.className = "btn";
+    again.textContent = "Volver a jugar 🔄";
+    again.addEventListener("click", startQuiz);
+
+    document.getElementById("quizAnswers").appendChild(again);
+
+    completeGame(2);
+
+    floatingHearts(15);
+}
+
+/* =====================================
+   JUEGO 3: MEMORIA DE PAREJITAS
+===================================== */
+
+const matchSymbols = [
+    "💗", "🌸", "🧸", "🌙", "🦋", "💌"
+];
+
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let matchesFound = 0;
+let matchStarted = false;
+
+function startMatchGame() {
+    const grid = document.getElementById("matchGrid");
+
+    grid.innerHTML = "";
+
+    firstCard = null;
+    secondCard = null;
+    lockBoard = false;
+    matchesFound = 0;
+    matchStarted = true;
+
+    document.getElementById("matchStatus").textContent =
+        "Parejas encontradas: 0/6";
+
+    document.getElementById("matchReward").textContent =
+        "¡A encontrar todas las parejitas, Evelyn! 💗";
+
+    const deck = [...matchSymbols, ...matchSymbols]
+        .sort(() => Math.random() - .5);
+
+    deck.forEach((symbol, index) => {
+        const button = document.createElement("button");
+
+        button.className = "match-card";
+        button.textContent = "❔";
+
+        button.dataset.symbol = symbol;
+        button.dataset.index = index;
+
+        button.addEventListener("click", () => {
+            flipMatchCard(button);
+        });
+
+        grid.appendChild(button);
+    });
+}
+
+function flipMatchCard(card) {
+    if (
+        lockBoard ||
+        card.disabled ||
+        card === firstCard ||
+        !matchStarted
+    ) {
+        return;
+    }
+
+    card.textContent = card.dataset.symbol;
+
+    if (!firstCard) {
+        firstCard = card;
+        return;
+    }
+
+    secondCard = card;
+    lockBoard = true;
+
+    if (firstCard.dataset.symbol === secondCard.dataset.symbol) {
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
+
+        firstCard.disabled = true;
+        secondCard.disabled = true;
+
+        matchesFound++;
+
+        document.getElementById("matchStatus").textContent =
+            "Parejas encontradas: " + matchesFound + "/6";
+
+        firstCard = null;
+        secondCard = null;
+        lockBoard = false;
+
+        if (matchesFound === 6) {
+            finishMatchGame();
+        }
+
+    } else {
+        setTimeout(() => {
+            firstCard.textContent = "❔";
+            secondCard.textContent = "❔";
+
+            firstCard = null;
+            secondCard = null;
+
+            lockBoard = false;
+        }, 800);
+    }
+}
+
+function finishMatchGame() {
+    matchStarted = false;
+
+    document.getElementById("matchReward").textContent =
+        "¡¡¡ENCONTRASTE TODAS LAS PAREJITAS!!! 🌸 " +
+        "Eres una campeona, Evelyn. Te has ganado un abrazo " +
+        "de osito y un montón de besitos de Ricardo. 💋💗";
+
+    completeGame(3);
+
+    floatingHearts(25);
+}
+
+startMatchGame();
+
+/* =====================================
+   SORPRESA SECRETA
+===================================== */
+
+function unlockSecret() {
+    if (completedGames.size < 3) {
+        const remaining = 3 - completedGames.size;
+
+        document.getElementById("secretStatus").textContent =
+            "Todavía quedan " + remaining +
+            " juego(s) por completar. ¡Tú puedes, mi niña! 💗";
+
+        floatingHearts(3);
+
+        return;
+    }
+
+    const box = document.getElementById("secretBox");
+
+    box.classList.add("show");
+
+    document.getElementById("secretButton").textContent =
+        "¡Sorpresa desbloqueada! 💖";
+
+    box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    floatingHearts(35);
+}
+
+function kissRain() {
+    floatingHearts(60);
+
+    document.getElementById("kissMessage").textContent =
+        "¡Muaaaaaak, muaaaaaak, muaaaaaak! 💋💋💋 " +
+        "Todos estos besitos son para ti, mi Evelyn preciosa. " +
+        "Firmado: tu Ricardo. ❤️";
+}
+
+/* =====================================
+   SORPRESA FINAL
+===================================== */
+
+function finalSurprise() {
+    const box = document.getElementById("finalSurpriseBox");
+
+    box.classList.toggle("show");
+
+    if (box.classList.contains("show")) {
+        box.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        floatingHearts(30);
+    }
+}
+</script>
+
+</body>
+</html>
